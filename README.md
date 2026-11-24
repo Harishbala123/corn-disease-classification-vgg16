@@ -18,6 +18,12 @@ It is compared against an identical baseline VGG16 trained with ordinary cross-e
 <img src="results/graphs/confusion_matrix_custom.png" width="45%"/>
 </p>
 
+## Interactive demo
+```powershell
+.\run_demo.bat              # or: streamlit run app.py   → http://localhost:8502
+```
+Classify a bundled held-out test leaf ([samples/](samples/), 8 images) or upload your own photo. The app shows the baseline and custom-loss probabilities side by side, plus the confusion matrices and embedding plots. If the trained models are missing, it offers to download them from the v1.0 release.
+
 ---
 
 ## 1. Problem statement

@@ -9,3 +9,4 @@ opencv-python==5.1.0.95
 pyyaml==6.0.4
 pytest==9.2.0
 # git must be on PATH for scripts/acquire_data.py (sparse clone of the image sources)
+streamlit==1.67.0   # demo app (app.py)

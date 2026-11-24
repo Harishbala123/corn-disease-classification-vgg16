@@ -24,6 +24,9 @@ It is compared against an identical baseline VGG16 trained with ordinary cross-e
 ```
 Classify a bundled held-out test leaf ([samples/](samples/), 8 images) or upload your own photo. The app shows the baseline and custom-loss probabilities side by side, plus the confusion matrices and embedding plots. If the trained models are missing, it offers to download them from the v1.0 release.
 
+![Interactive demo: baseline vs custom-loss VGG16 on a Blight field photo](results/graphs/demo_app.jpg)
+*A held-out field photo of Blight. The custom-loss model is more confident in the correct class (73.9% vs 61.1%) and puts less probability on the easily confused Gray Leaf Spot.*
+
 ---
 
 ## 1. Problem statement

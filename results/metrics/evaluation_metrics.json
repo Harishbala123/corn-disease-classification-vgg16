@@ -1,0 +1,145 @@
+{
+  "models": {
+    "baseline": {
+      "accuracy": 0.930379746835443,
+      "macro_precision": 0.9116311217806143,
+      "macro_recall": 0.9277594070543578,
+      "macro_f1": 0.9175373096905588,
+      "per_class": {
+        "Blight": {
+          "precision": 0.9053254437869822,
+          "recall": 0.8693181818181818,
+          "f1": 0.8869565217391304,
+          "support": 176
+        },
+        "Common_Rust": {
+          "precision": 0.9945652173913043,
+          "recall": 0.9336734693877551,
+          "f1": 0.9631578947368421,
+          "support": 196
+        },
+        "Gray_Leaf_Spot": {
+          "precision": 0.7523809523809524,
+          "recall": 0.9080459770114943,
+          "f1": 0.8229166666666666,
+          "support": 87
+        },
+        "Healthy": {
+          "precision": 0.9942528735632183,
+          "recall": 1.0,
+          "f1": 0.9971181556195965,
+          "support": 173
+        }
+      },
+      "critical_errors": 30,
+      "blight_to_gls": 22,
+      "gls_to_blight": 8,
+      "blight_gls_silhouette": 0.33761653304100037,
+      "confusion_matrix": [
+        [
+          153,
+          1,
+          22,
+          0
+        ],
+        [
+          8,
+          183,
+          4,
+          1
+        ],
+        [
+          8,
+          0,
+          79,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          173
+        ]
+      ]
+    },
+    "custom": {
+      "accuracy": 0.9525316455696202,
+      "macro_precision": 0.9391089489173796,
+      "macro_recall": 0.9464369516402426,
+      "macro_f1": 0.9423894774288722,
+      "per_class": {
+        "Blight": {
+          "precision": 0.9415204678362573,
+          "recall": 0.9147727272727273,
+          "f1": 0.9279538904899135,
+          "support": 176
+        },
+        "Common_Rust": {
+          "precision": 0.9744897959183674,
+          "recall": 0.9744897959183674,
+          "f1": 0.9744897959183674,
+          "support": 196
+        },
+        "Gray_Leaf_Spot": {
+          "precision": 0.8404255319148937,
+          "recall": 0.9080459770114943,
+          "f1": 0.8729281767955801,
+          "support": 87
+        },
+        "Healthy": {
+          "precision": 1.0,
+          "recall": 0.9884393063583815,
+          "f1": 0.9941860465116279,
+          "support": 173
+        }
+      },
+      "critical_errors": 18,
+      "blight_to_gls": 11,
+      "gls_to_blight": 7,
+      "blight_gls_silhouette": 0.5270437598228455,
+      "confusion_matrix": [
+        [
+          161,
+          4,
+          11,
+          0
+        ],
+        [
+          3,
+          191,
+          2,
+          0
+        ],
+        [
+          7,
+          1,
+          79,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          171
+        ]
+      ]
+    }
+  },
+  "comparison": {
+    "n_test_images": 632,
+    "n_test_blight_or_gls": 263,
+    "critical_errors_baseline": 30,
+    "critical_errors_custom": 18,
+    "critical_error_reduction_pct": 40.0,
+    "critical_error_reduction_95ci_pct": [
+      12.812500000000002,
+      62.5
+    ],
+    "accuracy_baseline": 0.930379746835443,
+    "accuracy_custom": 0.9525316455696202,
+    "accuracy_difference_95ci": [
+      0.004746835443037889,
+      0.04113924050632911
+    ]
+  }
+}

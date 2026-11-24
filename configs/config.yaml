@@ -1,0 +1,37 @@
+# Corn leaf disease classification: VGG16 + reinforcement-learning-inspired loss
+seed: 42
+
+data:
+  raw_dir: data/raw
+  processed_dir: data/processed
+  image_size: 256          # images are stored at 256x256, random/centre-cropped to 224
+  crop_size: 224
+  min_side: 64             # images smaller than this are rejected during validation
+  val_fraction: 0.15
+  test_fraction: 0.15
+
+classes: [Blight, Common_Rust, Gray_Leaf_Spot, Healthy]
+critical_pair: [Blight, Gray_Leaf_Spot]
+
+model:
+  embedding_dim: 128
+  dense_units: 256
+  dropout: 0.5
+
+training:
+  batch_size: 32
+  head_epochs: 5           # stage 1: frozen VGG16 convolutional base
+  head_lr: 0.001
+  finetune_epochs: 8       # stage 2: unfreeze block5
+  finetune_lr: 0.00005
+  patience: 3
+  class_weighting: inverse_frequency   # used by BOTH baseline and custom models
+
+custom_loss:
+  reward_correct: 1.0
+  penalty_wrong: -1.0
+  penalty_critical: -4.0   # Blight <-> Gray Leaf Spot confusion
+  lambda_reward: 1.0       # weight of the expected-regret (policy) term
+  lambda_contrastive: 0.5  # weight of the supervised-contrastive embedding term
+  temperature: 0.1
+  hard_negative_weight: 3.0   # extra weight of Blight/GLS pairs in the contrastive denominator

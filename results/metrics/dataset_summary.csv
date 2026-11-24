@@ -1,0 +1,5 @@
+label,train,val,test,total,PlantDoc,PlantVillage
+Blight,822,176,176,1174,189,985
+Common_Rust,916,196,196,1308,116,1192
+Gray_Leaf_Spot,406,87,87,580,67,513
+Healthy,815,174,173,1162,0,1162

@@ -1,0 +1,53 @@
+﻿python.exe : WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+At line:1 char:646
++ ... _LEVEL="2"; & .\.venv\Scripts\python.exe scripts\train.py --variant c ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (WARNING: All lo...itten to STDERR:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+I0000 00:00:1795524901.400427   13800 port.cc:153] oneDNN custom operations are on. You may see slightly different 
+numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the 
+environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1795524915.221768   13800 port.cc:153] oneDNN custom operations are on. You may see slightly different 
+numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the 
+environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:From C:\Users\Harish Bala\resume_projects\corn-disease-classification-vgg16\.venv\Lib\site-packages\
+keras\src\backend\tensorflow\core.py:233: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder 
+instead.
+
+WARNING:tensorflow:TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if 
+CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+18:25:31 | INFO | src.training.train | [custom] stage head: 6 trainable weights tensors
+C:\Users\Harish Bala\resume_projects\corn-disease-classification-vgg16\.venv\Lib\site-packages\keras\src\trainers\epoch
+_iterator.py:74: UserWarning: `shuffle=True` was passed, but will be ignored since the data `x` was provided as a 
+tf.data.Dataset. The Dataset is expected to already be shuffled (via `.shuffle(buffer_size)`).
+  self.data_adapter = data_adapters.get_data_adapter(
+Epoch 1/5
+93/93 - 434s - 5s/step - embedding_loss: 3.5342 - loss: 4.4872 - probs_accuracy: 0.6617 - probs_loss: 2.7028 - val_embedding_loss: 3.4514 - val_loss: 2.9216 - val_probs_accuracy: 0.8215 - val_probs_loss: 1.2238
+Epoch 2/5
+93/93 - 410s - 4s/step - embedding_loss: 3.2468 - loss: 3.3920 - probs_accuracy: 0.7766 - probs_loss: 1.7671 - val_embedding_loss: 3.4348 - val_loss: 2.7457 - val_probs_accuracy: 0.8847 - val_probs_loss: 1.0505
+Epoch 3/5
+93/93 - 428s - 5s/step - embedding_loss: 3.1554 - loss: 3.1276 - probs_accuracy: 0.8050 - probs_loss: 1.5485 - val_embedding_loss: 3.4146 - val_loss: 2.6360 - val_probs_accuracy: 0.9021 - val_probs_loss: 0.9580
+Epoch 4/5
+93/93 - 491s - 5s/step - embedding_loss: 3.0622 - loss: 2.8913 - probs_accuracy: 0.8243 - probs_loss: 1.3533 - val_embedding_loss: 3.4250 - val_loss: 2.8345 - val_probs_accuracy: 0.8420 - val_probs_loss: 1.1471
+Epoch 5/5
+93/93 - 445s - 5s/step - embedding_loss: 2.9853 - loss: 2.8499 - probs_accuracy: 0.8246 - probs_loss: 1.3523 - val_embedding_loss: 3.4231 - val_loss: 2.6064 - val_probs_accuracy: 0.8926 - val_probs_loss: 0.9266
+19:02:19 | INFO | src.training.train | [custom] stage finetune: 12 trainable weights tensors
+Epoch 1/8
+93/93 - 515s - 6s/step - embedding_loss: 2.8311 - loss: 2.4213 - probs_accuracy: 0.8787 - probs_loss: 0.9981 - val_embedding_loss: 3.4278 - val_loss: 2.6717 - val_probs_accuracy: 0.8831 - val_probs_loss: 0.9778
+Epoch 2/8
+93/93 - 415s - 4s/step - embedding_loss: 2.6708 - loss: 2.0524 - probs_accuracy: 0.9165 - probs_loss: 0.7142 - val_embedding_loss: 3.4229 - val_loss: 2.2797 - val_probs_accuracy: 0.9368 - val_probs_loss: 0.5930
+Epoch 3/8
+93/93 - 359s - 4s/step - embedding_loss: 2.5895 - loss: 1.8566 - probs_accuracy: 0.9368 - probs_loss: 0.5559 - val_embedding_loss: 3.4192 - val_loss: 2.1820 - val_probs_accuracy: 0.9510 - val_probs_loss: 0.4945
+Epoch 4/8
+93/93 - 297s - 3s/step - embedding_loss: 2.5478 - loss: 1.7873 - probs_accuracy: 0.9463 - probs_loss: 0.5085 - val_embedding_loss: 3.4414 - val_loss: 2.2823 - val_probs_accuracy: 0.9336 - val_probs_loss: 0.5897
+Epoch 5/8
+93/93 - 294s - 3s/step - embedding_loss: 2.5190 - loss: 1.7299 - probs_accuracy: 0.9473 - probs_loss: 0.4650 - val_embedding_loss: 3.4634 - val_loss: 2.4638 - val_probs_accuracy: 0.9100 - val_probs_loss: 0.7509
+Epoch 6/8
+93/93 - 294s - 3s/step - embedding_loss: 2.4872 - loss: 1.6761 - probs_accuracy: 0.9530 - probs_loss: 0.4273 - val_embedding_loss: 3.4333 - val_loss: 2.1209 - val_probs_accuracy: 0.9558 - val_probs_loss: 0.4249
+Epoch 7/8
+93/93 - 266s - 3s/step - embedding_loss: 2.4675 - loss: 1.6638 - probs_accuracy: 0.9523 - probs_loss: 0.4268 - val_embedding_loss: 3.4138 - val_loss: 2.0530 - val_probs_accuracy: 0.9668 - val_probs_loss: 0.3627
+Epoch 8/8
+93/93 - 257s - 3s/step - embedding_loss: 2.4356 - loss: 1.5929 - probs_accuracy: 0.9584 - probs_loss: 0.3706 - val_embedding_loss: 3.4381 - val_loss: 2.1315 - val_probs_accuracy: 0.9589 - val_probs_loss: 0.4305
+19:47:17 | INFO | src.training.train | [custom] done in 4906s
